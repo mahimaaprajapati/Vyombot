@@ -1,0 +1,458 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+<model name="lunabot_final_v2">
+    <static>false</static>
+    <pose>0 0 0 0 0 0</pose>
+    <link name="base_footprint">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.0001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.0001</iyy><iyz>0</iyz><izz>0.0001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="base_link">
+      <pose>0 0 0.07 0 0 0</pose>
+      <inertial>
+        <mass>12.0</mass>
+        <inertia>
+          <ixx>0.12</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.12</iyy><iyz>0</iyz><izz>0.12</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual_0">
+        <pose>0 0 0.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.50 0.40 0.14</size></box>
+        </geometry>
+        <material>
+          <ambient>1 0.4 0.7 1</ambient>
+          <diffuse>1 0.4 0.7 1</diffuse>
+        </material>
+      </visual>
+      <collision name="collision_0">
+        <pose>0 0 0.0 0 0 0</pose>
+        <geometry>
+          <box><size>0.50 0.40 0.14</size></box>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_FL">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.7</mass>
+        <inertia>
+          <ixx>0.001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.001</iyy><iyz>0</iyz><izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual_0">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.09</radius><length>0.05</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+      </visual>
+      <collision name="collision_0">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.09</radius><length>0.05</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_FR">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.7</mass>
+        <inertia>
+          <ixx>0.001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.001</iyy><iyz>0</iyz><izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual_0">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.09</radius><length>0.05</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+      </visual>
+      <collision name="collision_0">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.09</radius><length>0.05</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_RL">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.7</mass>
+        <inertia>
+          <ixx>0.001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.001</iyy><iyz>0</iyz><izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual_0">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.09</radius><length>0.05</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+      </visual>
+      <collision name="collision_0">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.09</radius><length>0.05</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_RR">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.7</mass>
+        <inertia>
+          <ixx>0.001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.001</iyy><iyz>0</iyz><izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual_0">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.09</radius><length>0.05</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+      </visual>
+      <collision name="collision_0">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.09</radius><length>0.05</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lidar_link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.0015</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.0015</iyy><iyz>0</iyz><izz>0.0015</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual_0">
+        <pose>0 0 0.155 0 0 0</pose>
+        <geometry>
+          <box><size>0.16 0.08 0.04</size></box>
+        </geometry>
+      </visual>
+      <collision name="collision_0">
+        <pose>0 0 0.155 0 0 0</pose>
+        <geometry>
+          <box><size>0.16 0.08 0.04</size></box>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="base_scan">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.00001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.00001</iyy><iyz>0</iyz><izz>0.00001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="camera_link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.12</mass>
+        <inertia>
+          <ixx>0.0004</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.0004</iyy><iyz>0</iyz><izz>0.0004</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual_0">
+        <pose>0.28 0 0.06 0 0 0</pose>
+        <geometry>
+          <box><size>0.06 0.04 0.04</size></box>
+        </geometry>
+        <material>
+          <ambient>1 1 0 1</ambient>
+          <diffuse>1 1 0 1</diffuse>
+        </material>
+      </visual>
+      <collision name="collision_0">
+        <pose>0.28 0 0.06 0 0 0</pose>
+        <geometry>
+          <box><size>0.06 0.04 0.04</size></box>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="camera_optical_frame">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.00001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.00001</iyy><iyz>0</iyz><izz>0.00001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="camera_depth">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.12</mass>
+        <inertia>
+          <ixx>0.0003</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.0003</iyy><iyz>0</iyz><izz>0.0003</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual_0">
+        <pose>0.26 0 0.02 0 0 0</pose>
+        <geometry>
+          <box><size>0.06 0.04 0.03</size></box>
+        </geometry>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+      </visual>
+      <collision name="collision_0">
+        <pose>0.26 0 0.02 0 0 0</pose>
+        <geometry>
+          <box><size>0.06 0.04 0.03</size></box>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="camera_depth_frame">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.00001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.00001</iyy><iyz>0</iyz><izz>0.00001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="camera_depth_optical_frame">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.00001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.00001</iyy><iyz>0</iyz><izz>0.00001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="imu_link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.05</mass>
+        <inertia>
+          <ixx>0.00001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.00001</iyy><iyz>0</iyz><izz>0.00001</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual_0">
+        <pose>0 0 0.03 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.02</radius></sphere>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="basefootprint_to_baselink" type="fixed">
+      <parent>base_footprint</parent>
+      <child>base_link</child>
+      <pose>0 0 0 0 0 0</pose>
+    </joint>
+
+    <joint name="joint_wheel_FL" type="continuous">
+      <parent>base_link</parent>
+      <child>wheel_FL</child>
+      <pose>0.22 0.20 0.02 0 0 0</pose>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+
+    <joint name="joint_wheel_FR" type="continuous">
+      <parent>base_link</parent>
+      <child>wheel_FR</child>
+      <pose>0.22 -0.20 0.02 0 0 0</pose>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+
+    <joint name="joint_wheel_RL" type="continuous">
+      <parent>base_link</parent>
+      <child>wheel_RL</child>
+      <pose>-0.22 0.20 0.02 0 0 0</pose>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+
+    <joint name="joint_wheel_RR" type="continuous">
+      <parent>base_link</parent>
+      <child>wheel_RR</child>
+      <pose>-0.22 -0.20 0.02 0 0 0</pose>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+
+    <joint name="joint_lidar" type="fixed">
+      <parent>base_link</parent>
+      <child>lidar_link</child>
+      <pose>0 0 0.155 0 0 0</pose>
+    </joint>
+
+    <joint name="lidar_to_base_scan" type="fixed">
+      <parent>lidar_link</parent>
+      <child>base_scan</child>
+      <pose>0 0 0 0 0 0</pose>
+    </joint>
+
+    <joint name="camera_link_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>camera_link</child>
+      <pose>0.28 0 0.06 0 0 0</pose>
+    </joint>
+
+    <joint name="camera_optical_joint" type="fixed">
+      <parent>camera_link</parent>
+      <child>camera_optical_frame</child>
+      <pose>0 0 0 -1.5708 0 0</pose>
+    </joint>
+
+    <joint name="camera_depth_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>camera_depth</child>
+      <pose>0.26 0 0.02 0 0 0</pose>
+    </joint>
+
+    <joint name="camera_depth_frame_joint" type="fixed">
+      <parent>camera_depth</parent>
+      <child>camera_depth_frame</child>
+      <pose>0 0 0 0 0 0</pose>
+    </joint>
+
+    <joint name="camera_depth_optical_joint" type="fixed">
+      <parent>camera_depth_frame</parent>
+      <child>camera_depth_optical_frame</child>
+      <pose>0 0 0 -1.5708 0 0</pose>
+    </joint>
+
+    <joint name="imu_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>imu_link</child>
+      <pose>0 0 0.03 0 0 0</pose>
+    </joint>
+
+    <!-- sensor: lidar_sensor attached to lidar_link -->
+    <sensor name="lidar_sensor" type="ray">
+      <pose>0 0 0 0 0 0</pose>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.5708</min_angle>
+            <max_angle>1.5708</max_angle>
+          </horizontal>
+        </scan>
+        <range><min>0.05</min><max>30</max></range>
+      </ray>
+    </sensor>
+
+    <!-- sensor: rgb_cam attached to camera_link -->
+    <sensor name="rgb_cam" type="camera">
+      <pose>0 0 0 0 0 0</pose>
+      <camera>
+        <horizontal_fov>1.047</horizontal_fov>
+        <image><width>640</width><height>480</height></image>
+        <clip><near>0.01</near><far>100</far></clip>
+      </camera>
+    </sensor>
+
+    <!-- sensor: depth_cam attached to camera_depth -->
+    <sensor name="depth_cam" type="camera">
+      <pose>0 0 0 0 0 0</pose>
+      <camera>
+        <horizontal_fov>1.047</horizontal_fov>
+        <image><width>640</width><height>480</height></image>
+        <clip><near>0.01</near><far>100</far></clip>
+      </camera>
+    </sensor>
++++
+    <!-- sensor: imu_sensor attached to imu_link -->
+    <sensor name="imu_sensor" type="imu">
+      <pose>0 0 0 0 0 0</pose>
+      <imu>
+        <angular_velocity><noise type="gaussian"><mean>0</mean><stddev>0.0001</stddev></noise></angular_velocity>
+        <linear_acceleration><noise type="gaussian"><mean>0</mean><stddev>0.0001</stddev></noise></linear_acceleration>
+      </imu>
+    </sensor>
+    <plugin filename="libignition-gazebo-diff-drive-system.so" name="ignition::gazebo::systems::DiffDrive">
+      <left_wheels>
+        <wheel>joint_wheel_FL</wheel>
+        <wheel>joint_wheel_RL</wheel>
+      </left_wheels>
+      <right_wheels>
+        <wheel>joint_wheel_FR</wheel>
+        <wheel>joint_wheel_RR</wheel>
+      </right_wheels>
+      <wheel_separation>0.40</wheel_separation>
+      <wheel_radius>0.09</wheel_radius>
+      <cmd_vel_topic>cmd_vel</cmd_vel_topic>
+      <odom_topic>odom</odom_topic>
+      <odom_frame>odom</odom_frame>
+      <base_frame>base_link</base_frame>
+      <publish_odometry>true</publish_odometry>
+    </plugin>
+
+    <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+      <sensor name="lidar_sensor">
+        <ros><namespace>/lunabot</namespace><topic>base_scan</topic><type>sensor_msgs/msg/LaserScan</type></ros>
+      </sensor>
+      <sensor name="imu_sensor">
+        <ros><namespace>/lunabot</namespace><topic>imu_sensor</topic><type>sensor_msgs/msg/Imu</type></ros>
+      </sensor>
+      <sensor name="rgb_cam">
+        <ros><namespace>/lunabot</namespace><topic>rgb_cam/image</topic><type>sensor_msgs/msg/Image</type></ros>
+      </sensor>
+      <sensor name="depth_cam">
+        <ros><namespace>/lunabot</namespace><topic>depth_cam/image</topic><type>sensor_msgs/msg/Image</type></ros>
+      </sensor>
+    </plugin>
+
+  </model>
+</sdf>
