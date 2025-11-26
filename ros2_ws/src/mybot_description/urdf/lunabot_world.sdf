@@ -1,0 +1,19 @@
+<sdf version="1.8">
+  <world name="lunabot_sim_world">
+
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Sun</uri>
+    </include>
+
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Ground%20Plane</uri>
+    </include>
+
+    <include>
+      <uri>file:///home/ruchi/mybot_ws/src/mybot_description/urdf/lunabot_ignition_fixed.sdf</uri>
+      <name>lunabot_ignition_fixed</name>
+      <pose>0 0 0.5 0 0 0</pose>
+    </include>
+
+  </world>
+</sdf>
