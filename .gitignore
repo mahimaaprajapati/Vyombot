@@ -1,7 +1,18 @@
+# ROS build products
 build/
 install/
 log/
-.colcon*
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# User generated
+frames_*.gv
+frames_*.pdf
+
+# Python cache
+__pycache__/
 *.pyc
+
 *.swp
 

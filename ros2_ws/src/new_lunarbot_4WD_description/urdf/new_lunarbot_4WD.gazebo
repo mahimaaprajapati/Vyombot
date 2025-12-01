@@ -54,6 +54,75 @@
   </plugin>
 </gazebo>
 
+<gazebo reference="imu_link_1">
+  <sensor name="imu_sensor" type="imu">
+    <always_on>true</always_on>
+    <update_rate>50</update_rate>
+
+    <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>imu:=/imu</remapping>
+      </ros>
+      <frame_name>imu_link_1</frame_name>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<gazebo reference="rgbcam_link_1">
+  <sensor type="camera" name="rgb_camera">
+    <always_on>true</always_on>
+    <update_rate>15</update_rate>
+    <camera>
+      <horizontal_fov>1.047</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.1</near>
+        <far>50.0</far>
+      </clip>
+    </camera>
+
+    <plugin name="rgb_camera_plugin" filename="libgazebo_ros_camera.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>image_raw:=/camera/rgb/image_raw</remapping>
+        <remapping>camera_info:=/camera/rgb/camera_info</remapping>
+      </ros>
+      <frame_name>rgbcam_link_1</frame_name>
+    </plugin>
+  </sensor>
+</gazebo>
+<gazebo reference="depthcam_link_1">
+  <sensor type="depth" name="depth_camera">
+    <always_on>true</always_on>
+    <update_rate>10</update_rate>
+    <camera>
+      <horizontal_fov>1.047</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.1</near>
+        <far>30.0</far>
+      </clip>
+    </camera>
+
+    <plugin name="depth_camera_plugin" filename="libgazebo_ros_depth_camera.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>image_raw:=/camera/depth/image_raw</remapping>
+        <remapping>camera_info:=/camera/depth/camera_info</remapping>
+      </ros>
+      <frame_name>depthcam_link_1</frame_name>
+    </plugin>
+  </sensor>
+</gazebo>
 
 
 <gazebo reference="lidar_link_1">
