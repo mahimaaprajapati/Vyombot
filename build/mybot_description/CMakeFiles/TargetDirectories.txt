@@ -1,0 +1,9 @@
+/home/khushboo/Vyombot/build/mybot_description/CMakeFiles/uninstall.dir
+/home/khushboo/Vyombot/build/mybot_description/CMakeFiles/mybot_description_uninstall.dir
+/home/khushboo/Vyombot/build/mybot_description/CMakeFiles/test.dir
+/home/khushboo/Vyombot/build/mybot_description/CMakeFiles/edit_cache.dir
+/home/khushboo/Vyombot/build/mybot_description/CMakeFiles/rebuild_cache.dir
+/home/khushboo/Vyombot/build/mybot_description/CMakeFiles/list_install_components.dir
+/home/khushboo/Vyombot/build/mybot_description/CMakeFiles/install.dir
+/home/khushboo/Vyombot/build/mybot_description/CMakeFiles/install/local.dir
+/home/khushboo/Vyombot/build/mybot_description/CMakeFiles/install/strip.dir

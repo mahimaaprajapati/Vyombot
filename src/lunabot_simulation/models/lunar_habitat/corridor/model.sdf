@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="artemis_corridor">
+    <static>true</static>
+
+    <link name="corridor_link">
+
+      <!-- corridor mesh -->
+      <visual name="corridor_visual">
+        <geometry>
+          <mesh>
+            <uri>model://artemis_base/corridor/meshes/corridor.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="corridor_collision">
+        <geometry>
+          <mesh>
+            <uri>model://artemis_base/corridor/meshes/corridor.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+    </link>
+
+  </model>
+</sdf>
+

@@ -25,7 +25,7 @@
     <parent link="base_footprint"/>
     <child link="base_link"/>
     <!-- base_link center at z = 0.325 above ground -->
-      <origin xyz="0 0 0.325" rpy="0 0 -1.5708"/>
+    <origin xyz="0 0 0.325" rpy="0 0 0"/>
   </joint>
 
   <!-- BODY: 1.0 x 0.8 x 0.25 m -->
@@ -212,7 +212,7 @@
   <joint name="camera_mount_joint" type="fixed">
     <parent link="base_link"/>
     <child link="camera_mount_link"/>
-   <origin xyz="0 0 0.175" rpy="0 0 -1.5708"/>
+    <origin xyz="0 0 0.175" rpy="0 0 0"/>
   </joint>
 
   <!-- MAST on top of camera box -->
@@ -295,7 +295,7 @@
   <joint name="rgb_camera_joint" type="fixed">
     <parent link="camera_mount_link"/>
     <child link="rgb_camera_link"/>
-    <origin xyz="0.275 0 0" rpy="0 0 -1.5708"/>
+    <origin xyz="0.275 0 0" rpy="0 0 0"/>
   </joint>
 
   <!-- DEPTH CAMERA on the front of the main body, looking down -->
@@ -321,35 +321,31 @@
 
   <!-- body front face at x=+0.5, camera half-length 0.075 => 0.575 forward -->
   <joint name="depth_camera_joint" type="fixed">
-    <parent link="camera_mount_link"/>
+    <parent link="base_link"/>
     <child link="depth_camera_link"/>
-     <origin xyz="0.46 0 -0.14" rpy="0 0.7 0"/>
+    <origin xyz="0.575 0 0" rpy="0 0.35 0"/>
   </joint>
 
   <!-- GAZEBO PLUGINS -->
 
-  <gazebo reference="base_link">
-  <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
-    <ros>
-      <namespace>/</namespace>
-      <remapping>cmd_vel:=/cmd_vel</remapping>
-      <remapping>odom:=/odom</remapping>
-    </ros>
-
-    <!-- DRIVE WHEELS ONLY -->
-    <left_joint>wheel_fl_joint</left_joint>
-    <right_joint>wheel_fr_joint</right_joint>
-
-    <wheel_separation>0.8</wheel_separation>
-    <wheel_radius>0.25</wheel_radius>
-
-    <odom_frame>odom</odom_frame>
-    <robot_base_frame>base_link</robot_base_frame>
-    <publish_odom>true</publish_odom>
-    <publish_tf>true</publish_tf>
-  </plugin>
-</gazebo>
-
+  <gazebo>
+    <plugin name="gazebo_ros_diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>cmd_vel:=/cmd_vel</remapping>
+        <remapping>odom:=/odom</remapping>
+      </ros>
+      <left_joint>wheel_fl_joint</left_joint>
+      <left_joint>wheel_rl_joint</left_joint>
+      <right_joint>wheel_fr_joint</right_joint>
+      <right_joint>wheel_rr_joint</right_joint>
+      <wheel_separation>0.8</wheel_separation>
+      <wheel_diameter>0.5</wheel_diameter>
+      <publish_odom>true</publish_odom>
+      <publish_tf>true</publish_tf>
+      <robot_base_frame>base_link</robot_base_frame>
+    </plugin>
+  </gazebo>
 
   <!-- wheel friction -->
   <gazebo reference="wheel_fl_link">

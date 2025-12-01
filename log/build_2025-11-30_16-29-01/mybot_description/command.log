@@ -1,0 +1,6 @@
+Invoking command in '/home/khushboo/Vyombot/build/mybot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/khushboo/Vyombot/ros2_ws/src/mybot_description -DCMAKE_INSTALL_PREFIX=/home/khushboo/Vyombot/install/mybot_description
+Invoked command in '/home/khushboo/Vyombot/build/mybot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/khushboo/Vyombot/ros2_ws/src/mybot_description -DCMAKE_INSTALL_PREFIX=/home/khushboo/Vyombot/install/mybot_description
+Invoking command in '/home/khushboo/Vyombot/build/mybot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/khushboo/Vyombot/build/mybot_description -- -j16 -l16
+Invoked command in '/home/khushboo/Vyombot/build/mybot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/khushboo/Vyombot/build/mybot_description -- -j16 -l16
+Invoking command in '/home/khushboo/Vyombot/build/mybot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/khushboo/Vyombot/build/mybot_description
+Invoked command in '/home/khushboo/Vyombot/build/mybot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/khushboo/Vyombot/build/mybot_description
