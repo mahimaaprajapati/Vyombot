@@ -1,0 +1,193 @@
+<?xml version="1.0" ?>
+<robot name="new_lunarbot_4WD" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/Silver" />
+
+<gazebo>
+  <plugin name="control" filename="libgazebo_ros_control.so"/>
+</gazebo>
+
+
+<gazebo>
+  <plugin name="four_wheel_drive" filename="libgazebo_ros_diff_drive.so">
+
+    <ros>
+      <namespace>/</namespace>
+      <remapping>cmd_vel:=/cmd_vel</remapping>
+      <remapping>odom:=/odom</remapping>
+    </ros>
+
+    <!-- how many wheel PAIRS (left+right) -->
+    <num_wheel_pairs>2</num_wheel_pairs>
+
+    <!-- LEFT SIDE (2 wheels) -->
+    <left_joint>left_front_wheel_joint</left_joint>
+    <left_joint>left_back_wheel_joint</left_joint>
+
+    <!-- RIGHT SIDE (2 wheels) -->
+    <right_joint>front_right_wheel_joint</right_joint>
+    <right_joint>back_right_wheel_joint</right_joint>
+
+    <!-- kinematics -->
+    <wheel_separation>0.81</wheel_separation>
+    <wheel_diameter>0.16</wheel_diameter>
+
+    <!-- frames -->
+    <robot_base_frame>base_footprint</robot_base_frame>
+    <odometry_frame>odom</odometry_frame>
+
+    <!-- limits -->
+    <max_wheel_torque>20.0</max_wheel_torque>
+    <max_wheel_acceleration>5.0</max_wheel_acceleration>
+
+    <!-- output -->
+    <publish_odom>true</publish_odom>
+    <publish_odom_tf>true</publish_odom_tf>
+    <publish_wheel_tf>true</publish_wheel_tf>
+
+    <command_topic>cmd_vel</command_topic>
+    <odometry_topic>odom</odometry_topic>
+
+    <update_rate>50</update_rate>
+    <legacy_mode>false</legacy_mode>
+
+  </plugin>
+</gazebo>
+
+
+
+<gazebo reference="lidar_link_1">
+  <sensor type="ray" name="lidar_sensor">
+    <always_on>true</always_on>
+    <update_rate>15</update_rate>
+    <visualize>true</visualize>
+
+    <ray>
+      <scan>
+        <horizontal>
+          <samples>360</samples>
+          <resolution>1</resolution>
+          <min_angle>-3.14159</min_angle>
+          <max_angle>3.14159</max_angle>
+        </horizontal>
+      </scan>
+
+      <range>
+        <min>0.15</min>
+        <max>20.0</max>
+        <resolution>0.01</resolution>
+      </range>
+
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>
+    </ray>
+
+    <plugin name="gazebo_ros_laser" filename="libgazebo_ros_ray_sensor.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>~/out:=scan</remapping>
+      </ros>
+      <frame_name>lidar_link_1</frame_name>
+      <output_type>sensor_msgs/LaserScan</output_type>
+    </plugin>
+  </sensor>
+</gazebo>
+
+
+
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="front_right_wheel_1">
+  <material>${body_color}</material>
+  <mu1>2000</mu1>
+  <mu2>2000</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="back_right_wheel_1">
+  <material>${body_color}</material>
+  <mu1>2000</mu1>
+  <mu2>2000</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="left_front_wheel_1">
+  <material>${body_color}</material>
+  <mu1>2000</mu1>
+  <mu2>2000</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="left_back_wheel_1">
+  <material>${body_color}</material>
+  <mu1>500</mu1>
+  <mu2>500</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="lidar_link_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="rgbcam_link_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="depthcam_link_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="battery_link_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="cpu_link_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="heater_link_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="pcb_link_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="imu_link_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+</robot>
