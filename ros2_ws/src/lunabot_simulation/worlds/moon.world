@@ -2,12 +2,15 @@
 <sdf version="1.6">
   <world name="moon_world">
 
-    <!-- SUN -->
+    <!-- Sun Light -->
     <include>
       <uri>model://sun</uri>
     </include>
-
-    <!-- YOUR MOON SURFACE -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    <!-- Moon Terrain -->
     <include>
       <uri>model://moon_surface11</uri>
       <pose>0 0 0 0 0 0</pose>
@@ -15,3 +18,4 @@
 
   </world>
 </sdf>
+
